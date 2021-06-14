@@ -3,7 +3,7 @@ This repository holds a developer sample as a simple C# console application name
 
 You can download the PBIX template file from [here](https://github.com/PowerBiDevCamp/DatasetRedirect4ADLS/raw/main/PBIX/DatasetRedirect4ADLS.pbix). If you open this PBIX file, you will see it creates these dataset parameters named **AzureStorageAccountUrl**, **ContainerName** and **ExcelFileName**.
 
-![Dataset Parameters](images/imgage1.jpg?raw=true "Adding dataset parameters to a PBIX project file.")
+![Dataset Parameters](https://github.com/PowerBiDevCamp/DatasetRedirect4ADLS/raw/main/images/Image1.jpg?raw=true "Adding dataset parameters to a PBIX project file.")
  
 
 Here is the M code behind the query which uses these three dataset parameters to import data from an Excel file in ADLS.
