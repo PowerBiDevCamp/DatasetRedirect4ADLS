@@ -6,6 +6,7 @@ You can download the PBIX template file from [here](https://github.com/PowerBiDe
 
 Here is the M code behind the query which uses these three dataset parameters to import data from an Excel file in ADLS.
 
+```M
 let
     Source = AzureStorage.Blobs(AzureStorageAccountUrl),
     StorageContainer = Source{[Name=ContainerName]}[Data],
@@ -16,6 +17,7 @@ let
     Output = Table.TransformColumnTypes(OpenExcelTable,{{"Sales", Currency.Type}})
 in
     Output
+```
 
 After creating the parameterized PBIX file, I wrote C# code in a C# console application named DatasetRedirect4ADLS. This developer sample uses the Power BI .NET SDK to demonstrate how to implement the following onboarding logic.
 
@@ -27,6 +29,7 @@ After creating the parameterized PBIX file, I wrote C# code in a C# console appl
 
 You can examine the code I wrote in this C# source file named DatasetManager.cs. Inside this C# source file, you will find a function named PatchAdlsCredentials which demonstrates how to set datasource credentials using the Azure storage key.
 
+```C#
 public static void PatchAdlsCredentials(Guid WorkspaceId, string DatasetId) {
   PowerBIClient pbiClient = TokenManager.GetPowerBiClient(PowerBiPermissionScopes.TenantProvisioning);
   pbiClient.Datasets.TakeOverInGroup(WorkspaceId, DatasetId);
@@ -48,6 +51,7 @@ public static void PatchAdlsCredentials(Guid WorkspaceId, string DatasetId) {
     }
   };
 }
+```
 
 There is also another function named OnboardNewTenant which contains the top-level logic for the entire onboarding process.
 
