@@ -98,5 +98,4 @@ public static void OnboardNewTenant(PowerBiTenant Tenant) {
 }
 ```
 
-Let me know if you have any questions. I would be happy to demo this in our next meeting if you'd like me to. If you are not using the Power BI .NET SDK, I can also help to translate this code into what you will need if you are executing HTTP requests directly against the Power BI Service API.
 
