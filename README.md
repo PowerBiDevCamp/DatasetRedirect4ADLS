@@ -70,14 +70,17 @@ public static void OnboardNewTenant(PowerBiTenant Tenant) {
   Console.WriteLine(" - Importing PBIX teplate file...");
   string importName = "Sales";
 
-  var import = DatasetManager.ImportPBIX(workspace.Id, Properties.Resources.DatasetRedirect4ADLS_pbix, importName);
+  var import = DatasetManager.ImportPBIX(workspace.Id, 
+                                         Properties.Resources.DatasetRedirect4ADLS_pbix, 
+                                         importName);
 
   Dataset dataset = GetDataset(workspace.Id, importName);
 
   Console.WriteLine(" - Updating dataset parameters...");
   UpdateMashupParametersRequest req =
     new UpdateMashupParametersRequest(new List<UpdateMashupParameterDetails>() {
-      new UpdateMashupParameterDetails { Name = "AzureStorageAccountUrl", NewValue = Tenant.AzureStorageAccountUrl },
+      new UpdateMashupParameterDetails { Name = "AzureStorageAccountUrl", 
+                                         NewValue = Tenant.AzureStorageAccountUrl },
       new UpdateMashupParameterDetails { Name = "ContainerName", NewValue = Tenant.ContainerName },
       new UpdateMashupParameterDetails { Name = "ExcelFileName", NewValue = Tenant.ExcelFileName }
   });
