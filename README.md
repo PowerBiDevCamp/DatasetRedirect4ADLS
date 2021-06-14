@@ -21,7 +21,7 @@ in
     Output
 ```
 
-After creating the parameterized PBIX file, I wrote C# code in a C# console application named DatasetRedirect4ADLS. This developer sample uses the Power BI .NET SDK to demonstrate how to implement the following onboarding logic.
+After creating the parameterized PBIX file, I wrote C# code in a C# console application named **DatasetRedirect4ADLS**. This developer sample uses the Power BI .NET SDK to demonstrate how to implement the following onboarding logic.
 
   1.	Create a new tenant workspace
   2.	Import the PBIX file template file to create a new dataset
