@@ -23,11 +23,11 @@ in
 
 After creating the parameterized PBIX file, I wrote C# code in a C# console application named DatasetRedirect4ADLS. This developer sample uses the Power BI .NET SDK to demonstrate how to implement the following onboarding logic.
 
-(1)	Create a new tenant workspace
-(2)	Import the PBIX file template file to create a new dataset
-(3)	Update the dataset parameters to redirect datasource to a specific Excel file in ADLS storage
-(4)	Set the datasource credentials using the ADLS storage key
-(5)	Start a refresh operation to populate the dataset with data from the Excel file in ADFS storage
+1.	Create a new tenant workspace
+2.	Import the PBIX file template file to create a new dataset
+3.	Update the dataset parameters to redirect datasource to a specific Excel file in ADLS storage
+4.	Set the datasource credentials using the ADLS storage key
+5.	Start a refresh operation to populate the dataset with data from the Excel file in ADFS storage
 
 You can examine the code I wrote in this C# source file named DatasetManager.cs. Inside this C# source file, you will find a function named PatchAdlsCredentials which demonstrates how to set datasource credentials using the Azure storage key.
 
