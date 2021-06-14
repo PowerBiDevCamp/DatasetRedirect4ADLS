@@ -1,5 +1,5 @@
 # Dataset Redirect for ADLS
-This repository holds a developer sample as a simple C# console application named **DatasetRedirect4ADLS** that demonstrates uploading a PBIX template file for a dataset that is parameterized to redirect to an Excel file in ADLS storage.
+This repository holds a developer sample created as a simple C# console application named **DatasetRedirect4ADLS**. This developer sample was created to demonstrate uploading a PBIX template file for a dataset that is parameterized to redirect its datasource to different Excel files located in ADLS storage.
 
 You can download the PBIX template file from [here](https://github.com/PowerBiDevCamp/DatasetRedirect4ADLS/raw/main/PBIX/DatasetRedirect4ADLS.pbix). If you open this PBIX file, you will see it creates these dataset parameters named **AzureStorageAccountUrl**, **ContainerName** and **ExcelFileName**.
 
