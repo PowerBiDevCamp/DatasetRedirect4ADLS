@@ -57,7 +57,7 @@ public static void PatchAdlsCredentials(Guid WorkspaceId, string DatasetId) {
 
 There is also another function named OnboardNewTenant which contains the top-level logic for the entire onboarding process.
 
-
+```C#
 public static void OnboardNewTenant(PowerBiTenant Tenant) {
 
   Console.WriteLine("Starting tenant onboarding process for " + Tenant.Name);
@@ -93,6 +93,7 @@ public static void OnboardNewTenant(PowerBiTenant Tenant) {
   Console.WriteLine(" - Tenant onboarding processing completed");
   Console.WriteLine();
 }
+```
 
 Let me know if you have any questions. I would be happy to demo this in our next meeting if you'd like me to. If you are not using the Power BI .NET SDK, I can also help to translate this code into what you will need if you are executing HTTP requests directly against the Power BI Service API.
 
